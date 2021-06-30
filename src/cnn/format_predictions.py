@@ -1,7 +1,7 @@
 import numpy as np 
 
 
-def get_predictions_indexes(data, predictions, window_size=12.8, fs=1250, threshold=0.5):
+def get_predictions_indexes(data, predictions, window_size=0.0128, fs=1250, threshold=0.5):
 	window_pts = window_size * fs
 	pred_indexes = []
 
