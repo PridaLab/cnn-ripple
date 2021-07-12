@@ -192,3 +192,24 @@ def load_data(path, shank, downsampled_fs=1250, verbose=False):
 	downsampled_data = downsample_data(data, fs, downsampled_fs, channels=channels_in_shank)
 	
 	return downsampled_data
+
+
+def generate_overlapping_windows(data, window_size, stride, fs):
+	window_pts = int(window_size * fs)
+	stride_pts = int(stride * fs)
+	r = range(0, data.shape[0], stride_pts)
+
+	new_data = np.empty((len(list(r)), window_pts, data.shape[1]))
+
+	cont = 0
+	for idx in r:
+		win = data[idx:idx+window_pts, :]
+
+		if (win.shape[0] < window_pts):
+			continue
+
+		new_data[cont,:,:]  = win
+
+		cont = cont+1
+
+	return new_data
