@@ -15,6 +15,6 @@ def get_predictions_indexes(data, predictions, window_size, stride, fs=1250, thr
 			pred_indexes.append(np.array([ini, end]))
 
 
-	return pred_indexes
+	return np.array(pred_indexes)
 
 

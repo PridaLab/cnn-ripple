@@ -114,32 +114,18 @@ def load_raw_data (path, expName, channels, verbose=False):
 	return data
 
 
-def downsample_data (data, fs, downsampled_fs, channels=[]):
+def downsample_data (data, fs, downsampled_fs):
 
     # Dowsampling
     if fs > downsampled_fs:
         downsampled_pts = np.linspace(0, data.shape[0]-1, int(np.round(data.shape[0]/fs*downsampled_fs))).astype(int)
         downsampled_data = data[downsampled_pts, :]
-        downsampled_data = downsampled_data[:, channels]
 
     # Upsampling
     elif fs < downsampled_fs:
-        # Make time array for both fs and downsampled_fs
-        time_fs = np.arange(len(data))/fs
-        time_downsampled_fs = np.arange(0., time_fs[-1], 1./downsampled_fs)
-        # Pre-allocate memory
-        downsampled_data = np.zeros((len(time_downsampled_fs), data.shape[1]), dtype=np.int16)
-        if len(channels)==0: channels = range(data.shape[1])
-        # Upsample channel by channel
-        for channel in channels:
-            # Make interpolation function
-            lin = interp1d(time_fs, data[:,channel], kind='quadratic') 
-            # Apply to new time array
-            downsampled_data[:,channel] = lin(time_downsampled_fs)
+        print("Original sampling rate below 1250 Hz!")
+        return None
 
-    # Same sampling
-    else:
-        downsampled_data = data[:, channels]
 
     # Change from int16 to float16 if necessary
     # int16 ranges from -32,768 to 32,767
@@ -169,7 +155,7 @@ def z_score_normalization(data):
 	return data
 
 
-def load_data(path, shank, downsampled_fs=1250, verbose=False):
+def load_data(path, shank, verbose=False):
 	# Read info.mat
 	fs, expName, ref_channels, dead_channels = load_info(path)
 
@@ -187,11 +173,9 @@ def load_data(path, shank, downsampled_fs=1250, verbose=False):
 
 	# Select channels to make dataset
 	channels_in_shank = list(np.where(np.array(shanks)==shank-1)[0])
+	data = data[:, channels_in_shank]
 
-	# Downsample data
-	downsampled_data = downsample_data(data, fs, downsampled_fs, channels=channels_in_shank)
-	
-	return downsampled_data
+	return data, fs
 
 
 def generate_overlapping_windows(data, window_size, stride, fs):
