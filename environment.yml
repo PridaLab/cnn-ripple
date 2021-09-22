@@ -94,6 +94,7 @@ dependencies:
     - grpcio==1.40.0
     - h5py==2.10.0
     - idna==3.2
+    - ipympl==0.8.0
     - ipywidgets==7.6.5
     - jupyterlab-widgets==1.0.2
     - keras-preprocessing==1.1.2
