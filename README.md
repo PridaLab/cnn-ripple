@@ -22,6 +22,8 @@ You can check our results in our manuscript (Navas-Olivé, Amaducci et al.).
 
 [This notebook](https://mybinder.org/v2/gh/RoyVII/cnn-ripple/HEAD?filepath=src%2Fnotebooks%2Fcnn-example.ipynb) illustrates one example of sharp-wave ripple detection with __CNN-ripple__. Follow and execute each block to download data and to load the trained CNN. Detection of events and the plot are depicted at the end of the notebook. You will be able to scroll along the recording to visualize detected events
 
+![alt text](https://github.com/RoyVII/cnn-ripple/blob/main/images/example_notebook.png)
+
 
 ## Technical notes
 
