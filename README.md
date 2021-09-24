@@ -4,7 +4,7 @@
 
 __CNN-ripple__ is a tool designed to detect sharp wave ripples (SWRs), a kind of fast oscillation that appear repetitively in hippocampal electrophysiological signals. During SWR, the sequential firing of ensembles of neurons act to reactivate memory traces of previously encoded experience. SWR-related interventions can influence hippocampal-dependent cognitive function, making their detection crucial to understand underlying mechanisms. However, existing SWR identification tools mostly rely on using spectral methods, which remain suboptimal.
 
-![Example](https://github.com/cnn-ripple/images/example_ripple.png)
+![alt_text](https://github.com/RoyVII/cnn-ripple/tree/main/images/example_ripple.png)
 
 __CNN-ripple__ is a 1D convolutional neural network (CNN) operating over high-density LFP recordings to detect hippocampal SWR both offline and online.  It works with recordings from several types of recordings (e.g. linear arrays, high-density probes, ultradense Neuropixels) as well as on open databases that were not used for training. Moreover, __CNN-ripple__ can be used to detect SWRs in real time, by loading it our [custom plug-in](https://github.com/RoyVII/CNNRippleDetectorOEPlugin) to the widely used open system such [Open Ephys](https://open-ephys.org/).
 
@@ -32,4 +32,4 @@ Inputs must meet the following characteristics:
 * Number of channels: 8
 * Channels sorted from top to bottom
 
-![Example](https://github.com/cnn-ripple/images/example_architecture.png)
+![Example](https://github.com/RoyVII/cnn-ripple/tree/main/images/example_architecture.png)
