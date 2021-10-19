@@ -1,5 +1,5 @@
 .ipynb_checkpoints 
 data/
-src/cnn/__pycache__/*
-figshare/__pycache__/*
+src/cnn/__pycache__/
+figshare/__pycache__/
 src/notebooks/figshare*/
