@@ -1,5 +1,5 @@
 # cnn-ripple
-<!---
+
 ## Description
 
 __CNN-ripple__ is a tool designed to detect sharp wave ripples (SWRs), a kind of fast oscillation that appear repetitively in hippocampal electrophysiological signals. During SWR, the sequential firing of ensembles of neurons act to reactivate memory traces of previously encoded experience. SWR-related interventions can influence hippocampal-dependent cognitive function, making their detection crucial to understand underlying mechanisms. However, existing SWR identification tools mostly rely on using spectral methods, which remain suboptimal.
@@ -20,7 +20,7 @@ You can check our results in our manuscript (Navas-Olivé, Amaducci et al.).
 
 ## Try it yourself!
 
-[This notebook](https://mybinder.org/v2/gh/RoyVII/cnn-ripple/HEAD?filepath=src%2Fnotebooks%2Fcnn-example.ipynb) illustrates one example of sharp-wave ripple detection with __CNN-ripple__. Follow and execute each block to download data and to load the trained CNN. Detection of events and the plot are depicted at the end of the notebook. You will be able to scroll along the recording to visualize detected events
+[This notebook](https://colab.research.google.com/github/RoyVII/cnn-ripple/blob/main/src/notebooks/cnn-example.ipynb) illustrates one example of sharp-wave ripple detection with __CNN-ripple__. Follow and execute each block to download data and to load the trained CNN. Detection of events and the plot are depicted at the end of the notebook. You will be able to scroll along the recording to visualize detected events
 
 ![alt text](https://github.com/RoyVII/cnn-ripple/blob/main/images/example_notebook.png)
 
@@ -34,4 +34,4 @@ Inputs must meet the following characteristics:
 * Number of channels: 8
 * Channels sorted from top to bottom
 
-![alt text](https://github.com/RoyVII/cnn-ripple/blob/main/images/example_architecture.png)-->
+![alt text](https://github.com/RoyVII/cnn-ripple/blob/main/images/example_architecture.png)
