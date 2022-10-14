@@ -15,7 +15,7 @@ The main advantages of cnn-ripple vs other SWR-detection algorithms are the foll
 * It can be used as an interpretation tool
 * It achieves online prediction several milliseconds in advance
 
-You can check our results in our manuscript ([Navas-Olivé, Amaducci et al. eLife 2022](https://elifesciences.org/articles/77772))
+You can check our results in our manuscript ([Navas-Olive, Amaducci et al. eLife 2022](https://elifesciences.org/articles/77772))
 
 
 ## Try it yourself!
