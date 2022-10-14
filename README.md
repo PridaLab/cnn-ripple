@@ -1,6 +1,6 @@
 # cnn-ripple
 
-## Description
+# Description
 
 __CNN-ripple__ is a tool designed to detect sharp wave ripples (SWRs), a kind of fast oscillation that appear repetitively in hippocampal electrophysiological signals. During SWR, the sequential firing of ensembles of neurons act to reactivate memory traces of previously encoded experience. SWR-related interventions can influence hippocampal-dependent cognitive function, making their detection crucial to understand underlying mechanisms. However, existing SWR identification tools mostly rely on using spectral methods, which remain suboptimal.
 
@@ -15,7 +15,7 @@ The main advantages of cnn-ripple vs other SWR-detection algorithms are the foll
 * It can be used as an interpretation tool
 * It achieves online prediction several milliseconds in advance
 
-You can check our results in our manuscript (Navas-Olivé, Amaducci et al.).
+You can check our results in our manuscript ([Navas-Olivé, Amaducci et al. eLife 2022](https://elifesciences.org/articles/77772))
 
 
 ## Try it yourself!
